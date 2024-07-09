@@ -20,7 +20,7 @@ import Calendar from "primevue/calendar";
 import ProgressSpinner from 'primevue/progressspinner';
 
 
-import { createMemoryHistory, createRouter } from "vue-router";
+import { createWebHistory, createRouter } from "vue-router";
 
 import Landing from "./components/Landing.vue";
 import Info from "./components/Info.vue";
@@ -50,9 +50,9 @@ const routes = [
     component: main,
   },
 ];
-
+//Para poder tener historial de navegación he cambiado createWebHistory por createMemoryHistory
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 });
 
