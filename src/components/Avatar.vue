@@ -21,7 +21,16 @@
                 @click="seleccionarAvatar(avatarList[4])"><img src="/imgs/avatars/Avatar5.png" alt=""></button>
         </div>
 
-        <RouterLink v-if="avatarSeleccionado" to="/info" class="start-button">Siguiente</RouterLink>
+        <router-link v-if="avatarSeleccionado" to="/info">
+            <Button type="button" label="Siguiente" class="p-button" />
+        </router-link>
+
+        <router-link v-if="avatarSeleccionado" to="/">
+            <Button type="button" severity="secondary" label="Volver" class="p-button" />
+        </router-link>
+
+
+        <!-- <RouterLink v-if="avatarSeleccionado" to="/info" class="start-button">Siguiente</RouterLink> -->
 
 
         <!-- <img :src="selectedAvatarStore.avatar"> -->
@@ -147,4 +156,5 @@ export default {
         transform: translateY(0);
 
     }
-}</style>
+}
+</style>
