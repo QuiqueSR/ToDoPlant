@@ -1,5 +1,5 @@
 <template>
-    <Dialog :visible="visible" modal header="Editar Tarea" :style="{ width: '25rem' }">
+    <Dialog @update:visible="close" :visible="visible" modal header="Editar Tarea" :style="{ width: '25rem' }">
         <div class="flex flex-col gap-4">
             <span class="text-surface-500 dark:text-surface-400 block mb-8">Selecciona la categoría de tu tarea:</span>
             <Dropdown v-model="selectedCategory" :options="categorias" optionLabel="name" optionValue="name"
@@ -103,8 +103,8 @@ export default {
                 console.log("TEXT ID: ", this.localTask.id)
                 console.log("TEXT: ", this.localTask.text)
                 console.log("TEXT DESCRIPTION: ", this.selectedCategory)
-                
-            
+
+
 
                 // Realiza el fetch PATCH aquí
                 let id = this.localTask.id
@@ -114,26 +114,26 @@ export default {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        id:this.localTask.id,
-                        text: this.localTask.text,       
+                        id: this.localTask.id,
+                        text: this.localTask.text,
                         description: this.selectedCategory,
                         completed: false,
-                        author:'pollo',
+                        author: 'pollo',
                         tags: ["beach"],
                         createdAt: "2020-03-10T04:05:06.157Z"
                     }),
-                    
+
                 })
-                
-                .then((response) => response.json())
-                .then((data) => {
-                    console.log('Tarea actualizada:', data);
-                    this.$emit('edit-task', data);
-                    this.close();
-                })
-                .catch((error) => {
-                    console.error('Error al actualizar la tarea:', error);
-                });
+
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log('Tarea actualizada:', data);
+                        this.$emit('edit-task', data);
+                        this.close();
+                    })
+                    .catch((error) => {
+                        console.error('Error al actualizar la tarea:', error);
+                    });
             }
         },
         close() {
