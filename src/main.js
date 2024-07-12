@@ -50,7 +50,7 @@ const routes = [
     component: main,
   },
 ];
-//Para poder tener historial de navegación he cambiado createWebHistory por createMemoryHistory
+//Para poder tener historial y url de navegación he cambiado createWebHistory por createMemoryHistory
 const router = createRouter({
   history: createWebHistory(),
   routes,
