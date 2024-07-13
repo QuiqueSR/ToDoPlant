@@ -26,9 +26,11 @@
                 </p>
             </template>
             <template #footer>
-                <div style="text-align: center;" class="flex gap-4">
-
-                    <RouterLink to="/main" class="start-button">¡A plantar!</RouterLink>
+                <div>
+                    <RouterLink to="/main"> <Button type="button" label="¡A plantar!" class="p-button" /></RouterLink>
+                    <Router-link to="/avatar">
+                        <Button type="button" severity="secondary" label="Volver" class="p-button" />
+                    </Router-link>
                 </div>
             </template>
         </Card>
