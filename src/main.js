@@ -16,6 +16,7 @@ import Textarea from "primevue/textarea";
 import Card from "primevue/card";
 import InputText from "primevue/inputtext";
 import Calendar from "primevue/calendar";
+import Tooltip from 'primevue/tooltip';
 
 import ProgressSpinner from 'primevue/progressspinner';
 
@@ -72,4 +73,5 @@ createApp(App)
   .component("Calendar", Calendar)
   .component("ProgressSpinner", ProgressSpinner)
   .component('font-awesome-icon', FontAwesomeIcon)
+  .component('Tooltip', Tooltip)
   .mount("#app");

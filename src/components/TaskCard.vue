@@ -9,7 +9,17 @@
         </template>
         <template #footer>
             <div class="flex gap-4 mt-1 justify-between">
-                <Button label="Conseguida" class="w-full"><font-awesome-icon :icon="['fas', 'check']" /></Button>
+                <Button label="Conseguida" v-tooltip.bottom="{
+                    value: 'Completar tarea',
+                    pt: {
+                        arrow: {
+                            style: {
+                                borderBottomColor: 'var(--p-primary-color)'
+                            }
+                        },
+                        text: '!bg-primary !text-primary-contrast !font-medium'
+                    }
+                }" class="w-full"><font-awesome-icon :icon="['fas', 'check']" /></Button>
                 <Button label="Editar" @click="emitEdit" class="w-full"><font-awesome-icon
                         :icon="['fas', 'pen']" /></Button>
                 <Button label="Borrar" @click="emitDelete" class="w-full"><font-awesome-icon
