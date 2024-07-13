@@ -5,7 +5,7 @@ import { createPinia } from "pinia"
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faTrash, faEdit, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faEdit, faHandHoldingHeart, faCheckCircle, faCheck, faPen } from '@fortawesome/free-solid-svg-icons';
 
 import { createApp } from "vue";
 import PrimeVue from "primevue/config";
@@ -57,7 +57,7 @@ const router = createRouter({
 });
 
 // Añadir los elementos de PrimeVue aqui enlanzandolos con un  '.'
-library.add(faHandHoldingHeart, faTrash, faEdit);
+library.add(faHandHoldingHeart, faTrash, faEdit, faCheckCircle, faCheck, faPen);
 
 createApp(App)
   .use(PrimeVue)

@@ -9,10 +9,9 @@
         </template>
         <template #footer>
             <div class="flex gap-4 mt-1 justify-between">
-                <Button label="Conseguida" class="w-full"><font-awesome-icon
-                        :icon="['fas', 'hand-holding-heart']" /></Button>
+                <Button label="Conseguida" class="w-full"><font-awesome-icon :icon="['fas', 'check']" /></Button>
                 <Button label="Editar" @click="emitEdit" class="w-full"><font-awesome-icon
-                        :icon="['fas', 'edit']" /></Button>
+                        :icon="['fas', 'pen']" /></Button>
                 <Button label="Borrar" @click="emitDelete" class="w-full"><font-awesome-icon
                         :icon="['fas', 'trash']" /></Button>
             </div>
